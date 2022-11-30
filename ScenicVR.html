@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Research</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Back to Gallery</a>
+					</header>
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">Jun 2022 - Aug 2022</span>
+									<span>Electrical Systems Design Research, University of California, Berkeley <br />
+										<b>Supervisors: Edward Kim (Phd Candidate), Prof. Sanjit A. Seshia</b></span>
+									<h1>Scenic VR</h1>
+									
+									<p>An Intelligent Tutoring System (ITS) to Train Psychomotor Skills in Virtual Reality</p>
+								</header>
+
+								<div class="image main"><img src="images/scenic1.jpg" alt="" /></div>
+								<div class="image main"><img src="images/scenic2.jpg" alt="" /></div>
+								<!-- <div class="image main"><img src="images/pic01.jpg" alt="" /></div> -->
+								<p>During my summer at UC Berkeley, I worked with five undergraduates and one Ph.D. student to design an ITS using Bayesian knowledge tracing (BKT) as a skill mastery estimator. While ITSs are traditionally designed purely for cognitive skills, our ITS was able to focus on the high slip rate of psychomotor skills. We paired BKT with an adaptive curriculum generator to iteratively sample various training scenarios and sequentially generate them in VR headsets for the trainees to interact with. To represent knowledge dependencies, I developed a Knowledge Identification algorithm based on a directed acyclic graph data structure. The algorithm recursively traversed the graph and output the next evaluation scenario with minimal steps for identifying trainees’ prior knowledge. In order to evaluate the trainee’s skill mastery, I wrote Python scripts to monitor the trainee’s physical behavior in VR and provide feedback prompts. I also created a pyBKT package interface to fit the Bayesian model prior to the human experiment and co-developed the VR animation on a Unity 3D engine. To address the efficacy of our ITS, we conducted an between-subjects study and compared it to a self-guided learning control condition. Our results showed that our ITS had 32.3% higher learning gains than the self-guided baseline (p-value < .05) with an effect size of 0.41. This work was submitted to CHI’ 23 supervised by Prof. Sanjit A Seshia and Prof. Zachary A Pardos from UC Berkeley. 
+								</p>
+								<iframe src="/docs/Knowledge Identification.pdf" width="100%" height="500px">
+								</iframe>
+							</section>
+
+					</div>
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Yunzhong Xiao</li>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
