@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://shawn-yzxiao.github.io/</loc>
+<lastmod>2026-08-25T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://shawn-yzxiao.github.io/writing/</loc>
+<lastmod>2026-08-25T00:00:00.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://shawn-yzxiao.github.io/zh/writing/</loc>
+<lastmod>2026-08-25T00:00:00.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://shawn-yzxiao.github.io/writing/beyond-turn-taking/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://shawn-yzxiao.github.io/writing/beyond-turn-taking/" />
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://shawn-yzxiao.github.io/zh/writing/beyond-turn-taking/" />
+<lastmod>2026-08-24T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://shawn-yzxiao.github.io/writing/beyond-behavior/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://shawn-yzxiao.github.io/writing/beyond-behavior/" />
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://shawn-yzxiao.github.io/zh/writing/beyond-behavior/" />
+<lastmod>2026-08-24T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://shawn-yzxiao.github.io/writing/what-is-creativity/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://shawn-yzxiao.github.io/writing/what-is-creativity/" />
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://shawn-yzxiao.github.io/zh/writing/what-is-creativity/" />
+<lastmod>2026-08-24T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://shawn-yzxiao.github.io/zh/writing/beyond-turn-taking/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://shawn-yzxiao.github.io/writing/beyond-turn-taking/" />
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://shawn-yzxiao.github.io/zh/writing/beyond-turn-taking/" />
+<lastmod>2026-08-24T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://shawn-yzxiao.github.io/zh/writing/beyond-behavior/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://shawn-yzxiao.github.io/writing/beyond-behavior/" />
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://shawn-yzxiao.github.io/zh/writing/beyond-behavior/" />
+<lastmod>2026-08-24T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://shawn-yzxiao.github.io/zh/writing/what-is-creativity/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://shawn-yzxiao.github.io/writing/what-is-creativity/" />
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://shawn-yzxiao.github.io/zh/writing/what-is-creativity/" />
+<lastmod>2026-08-24T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+</urlset>

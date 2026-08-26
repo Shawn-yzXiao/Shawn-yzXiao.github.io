@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://shawn-yzxiao.github.io
+Sitemap: https://shawn-yzxiao.github.io/sitemap.xml
