@@ -57,7 +57,7 @@ export default function Home() {
                   alt="Shawn Xiao in Zion National Park"
                   width={720}
                   height={720}
-                  sizes="(max-width: 520px) 144px, (max-width: 900px) 220px, 16vw"
+                  sizes="(max-width: 680px) 42vw, (max-width: 900px) 220px, 16vw"
                   priority
                 />
               </figure>

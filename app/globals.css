@@ -316,6 +316,7 @@ img {
 
 .hero-portrait img {
   width: 100%;
+  height: auto;
   aspect-ratio: 1;
   border: 1px solid var(--rule);
   object-fit: cover;
@@ -1064,7 +1065,7 @@ img {
   .hero-focus { margin-top: 38px; }
   .hero-bio { padding-top: 0; font-size: 16px; }
   .hero-bio-opening { grid-template-columns: 1fr; gap: 24px; align-items: start; }
-  .hero-portrait { grid-row: 1; width: min(42vw, 144px); justify-self: end; }
+  .hero-portrait { grid-row: 1; width: clamp(144px, 42vw, 184px); justify-self: end; }
   .hero-bio-introduction { grid-row: 2; }
   .section { padding-block: 86px; }
   .section-heading { margin-bottom: 48px; }
