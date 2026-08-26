@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { essays, profile, research } from "@/lib/content";
@@ -11,6 +12,7 @@ const personStructuredData = {
     name: "Yunzhong Xiao",
     alternateName: ["Shawn Xiao", "Yunzhong Shawn Xiao", "肖云中"],
     url: "https://shawn-yzxiao.github.io/",
+    image: "https://shawn-yzxiao.github.io/shawn-zion.jpg",
     jobTitle: "Machine Learning Researcher",
     worksFor: { "@type": "Organization", name: "Apple" },
     alumniOf: { "@type": "CollegeOrUniversity", name: "Carnegie Mellon University" },
@@ -24,6 +26,7 @@ const personStructuredData = {
 
 export default function Home() {
   const englishEssays = essays.filter((essay) => essay.lang === "en");
+  const [bioIntroduction, ...bioBody] = profile.bio.split(/\n\s*\n/);
 
   return (
     <>
@@ -44,7 +47,22 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-bio">
-            <ReactMarkdown>{profile.bio}</ReactMarkdown>
+            <div className="hero-bio-opening">
+              <div className="hero-bio-introduction">
+                <ReactMarkdown>{bioIntroduction}</ReactMarkdown>
+              </div>
+              <figure className="hero-portrait">
+                <Image
+                  src="/shawn-zion.jpg"
+                  alt="Shawn Xiao in Zion National Park"
+                  width={720}
+                  height={720}
+                  sizes="(max-width: 520px) 144px, (max-width: 900px) 220px, 16vw"
+                  priority
+                />
+              </figure>
+            </div>
+            <ReactMarkdown>{bioBody.join("\n\n")}</ReactMarkdown>
           </div>
         </section>
 

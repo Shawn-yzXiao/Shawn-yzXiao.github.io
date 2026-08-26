@@ -296,6 +296,31 @@ img {
   line-height: 1.72;
 }
 
+.hero-bio-opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(190px, 16vw, 220px);
+  gap: clamp(28px, 4vw, 44px);
+  align-items: end;
+  margin-bottom: 38px;
+}
+
+.hero-bio-introduction p {
+  margin-bottom: 0;
+}
+
+.hero-portrait {
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--ink);
+}
+
+.hero-portrait img {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid var(--rule);
+  object-fit: cover;
+}
+
 .hero-bio p {
   margin: 0 0 1.35em;
 }
@@ -1038,6 +1063,9 @@ img {
   .hero h1 span { display: block; margin-block: 6px; }
   .hero-focus { margin-top: 38px; }
   .hero-bio { padding-top: 0; font-size: 16px; }
+  .hero-bio-opening { grid-template-columns: 1fr; gap: 24px; align-items: start; }
+  .hero-portrait { grid-row: 1; width: min(42vw, 144px); justify-self: end; }
+  .hero-bio-introduction { grid-row: 2; }
   .section { padding-block: 86px; }
   .section-heading { margin-bottom: 48px; }
   .heading-row { display: block; }
