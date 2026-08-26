@@ -1,9 +1,13 @@
 {
-  "eyebrow": "Machine Learning Researcher · Cupertino, California",
+  "eyebrow": "Apple · Machine Learning Researcher",
   "name": "Yunzhong “Shawn” Xiao",
+  "roleBullets": [
+    "Large-scale pre-training and post-training—including SFT and reinforcement learning—for conversational and multimodal foundation models.",
+    "Synthetic-data pipelines, simulated users, test-time scaling, and evaluations on distributed infrastructure."
+  ],
+  "bio": "Hi there! I am Shawn Xiao 肖云中, a Machine Learning Researcher at Apple.\n\nI work across the full stack of foundation model capability: pre-training to **build representations**, SFT and RL to **shape behavior**, synthetic data and evaluation to **expose failure modes**, and agents and tools to turn intelligence into **reliable action**.\n\nCurrently, I work on conversational and multimodal foundation models; previously, I built multimodal AI agents for content creation on Apple Vision Pro. I studied computer systems at Carnegie Mellon University.\n\n**My mission is to turn foundation models from fluent predictors into reliable collaborators — systems that learn deeply, act intelligently, and interact naturally with people.**\n\nI write about how training shapes model behavior, how agents learn to use tools, and how AI can expand human thought without replacing human judgment. I am also a reviewer for **NeurIPS** and **ACL**.\n\nOpen to research conversations around foundation model training, post-training, agentic systems, and human-AI interaction. Reach me by [email](mailto:shawncloudy@gmail.com), connect on [LinkedIn](https://www.linkedin.com/in/yzxiao/), or explore my work on [Google Scholar](https://scholar.google.com/citations?user=b9uTwEgAAAAJ&hl=en).",
   "mission": "From fluent predictors to reliable collaborators.",
-  "intro": "I work across the full stack of foundation model capability: pre-training to build representations, SFT and RL to shape behavior, synthetic data and evaluation to expose failure modes, and agents and tools to turn intelligence into reliable action.",
-  "currently": "Conversational and multimodal foundation models at Apple",
+  "missionDetail": "I study how models acquire capability, how training shapes their behavior, and how intelligent systems can interact with people naturally.",
   "agenda": [
     {
       "number": "01",
@@ -13,7 +17,7 @@
     {
       "number": "02",
       "title": "Shape behavior",
-      "text": "SFT, reward modeling, RL and RLVR, synthetic users, test-time scaling, and evaluations that make capability boundaries visible."
+      "text": "SFT, reward modeling, RL/RLVR, synthetic users, test-time scaling, and evaluations that make capability boundaries visible."
     },
     {
       "number": "03",
@@ -24,21 +28,21 @@
   "research": [
     {
       "title": "ToolMem: Enhancing Multimodal Agents with Learnable Tool Capability Memory",
-      "summary": "Dynamic memory that helps agents learn the strengths and weaknesses of neural tools from test-time experience.",
+      "summary": "A dynamic memory for agents to learn the strengths and weaknesses of neural tools from test time experience. ToolMem improves tool-performance prediction by 14.8% in text settings and 28.7% in multimodal settings, and improves optimal tool selection by 21 and 24 percentage points.",
       "venue": "arXiv",
       "year": "2025",
       "href": "https://arxiv.org/abs/2510.06664"
     },
     {
       "title": "MMPerspective: Do MLLMs Understand Perspective?",
-      "summary": "A ten-task benchmark for perspective perception, spatial reasoning, and robustness across 43 multimodal models.",
+      "summary": "A 10-task benchmark with 2,711 images and 5,083 question-answer pairs for testing perspective perception, spatial reasoning, and robustness across 43 multimodal large language models.",
       "venue": "NeurIPS",
       "year": "2025",
       "href": "https://arxiv.org/abs/2505.20426"
     },
     {
       "title": "Caption Anything in Video",
-      "summary": "Training-free, fine-grained object-centric video captioning with spatially precise and temporally coherent descriptions.",
+      "summary": "CAT-V is a training-free framework for fine-grained, object-centric video captioning. It combines segmentation, temporal analysis, and multimodal prompting to produce spatially precise and temporally coherent descriptions.",
       "venue": "AAAI",
       "year": "2026",
       "href": "https://ojs.aaai.org/index.php/AAAI/article/view/42385"

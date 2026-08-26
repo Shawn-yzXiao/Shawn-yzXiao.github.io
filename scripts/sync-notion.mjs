@@ -94,9 +94,22 @@ async function mirrorMarkdownImages(markdown, temporaryAssetDirectory) {
 }
 
 function extractHomeData(markdown, fallback) {
-  const lines = markdown.split("\n").map((line) => line.trim()).filter(Boolean);
-  const introLine = lines.find((line) => plainText(line).startsWith("I work across the full stack"));
-  const missionLine = lines.find((line) => plainText(line).startsWith("My mission is to"));
+  const topSection = markdown.split(/^# Mission & Research Agenda\s*$/m)[0] ?? markdown;
+  const topLines = topSection.split("\n").map((line) => line.trim());
+  const bioStart = topLines.findIndex((line) => plainText(line).startsWith("Hi there!"));
+  const bioEnd = topLines.findIndex((line) => plainText(line).startsWith("Open to research conversations"));
+  const bio = bioStart >= 0 && bioEnd >= bioStart
+    ? topLines
+      .slice(bioStart, bioEnd + 1)
+      .filter((line) => line && !/^<\/?(?:column|columns)|^<empty-block/.test(line))
+      .join("\n\n")
+    : fallback.bio;
+  const roleLine = topLines.find((line) => /^\*\*[^*]+\*\*\s*·/.test(line));
+  const roleBullets = topLines
+    .filter((line) => /^-\s+/.test(line))
+    .slice(0, 2)
+    .map((line) => plainText(line.replace(/^-\s+/, "")));
+  const missionMatch = markdown.match(/\*\*(From fluent predictors[^*]+)\*\*\s*([^\n<]+)/i);
   const agenda = [];
   const agendaMatches = markdown.matchAll(/###\s+(\d{2})\s*·\s*([^\n]+)\n([\s\S]*?)(?=\n\s*(?:###\s+\d{2}\s*·|<\/column>|#\s))/g);
   for (const match of agendaMatches) {
@@ -116,12 +129,13 @@ function extractHomeData(markdown, fallback) {
     research.push({ title: plainText(match[1]), href: match[2], summary, venue, year });
   }
 
-  const missionText = missionLine ? plainText(missionLine).replace(/^My mission is to\s+/i, "") : fallback.mission;
-  const mission = missionText ? `${missionText.charAt(0).toUpperCase()}${missionText.slice(1)}` : fallback.mission;
   return {
     ...fallback,
-    mission,
-    intro: introLine ? plainText(introLine) : fallback.intro,
+    eyebrow: roleLine ? plainText(roleLine) : fallback.eyebrow,
+    roleBullets: roleBullets.length === 2 ? roleBullets : fallback.roleBullets,
+    bio,
+    mission: missionMatch ? plainText(missionMatch[1]) : fallback.mission,
+    missionDetail: missionMatch ? plainText(missionMatch[2]) : fallback.missionDetail,
     agenda: agenda.length === 3 ? agenda : fallback.agenda,
     research: research.length >= 3 ? research : fallback.research,
   };
@@ -168,7 +182,10 @@ async function main() {
     const normalizedPages = new Map();
     for (const entry of notionPages) {
       const normalized = normalizeNotionMarkup(pages.get(entry.key));
-      normalizedPages.set(entry.key, await mirrorMarkdownImages(normalized, temporaryAssets));
+      const publishable = entry.kind === "home"
+        ? normalized.replace(/!\[[^\]]*\]\(https?:\/\/[^)\s]+\)/g, "").trim()
+        : await mirrorMarkdownImages(normalized, temporaryAssets);
+      normalizedPages.set(entry.key, publishable);
     }
 
     const fallbackHome = JSON.parse(await readFile(path.join(contentDirectory, "home.json"), "utf8"));
@@ -194,11 +211,6 @@ async function main() {
       await copyFile(path.join(temporaryAssets, filename), path.join(publicDirectory, "notion-assets", filename));
     }
 
-    const profileMatch = pages.get("home").match(/!\[[^\]]*\]\((https?:\/\/[^)\s]+)\)/);
-    if (profileMatch) {
-      const profile = await downloadAsset(profileMatch[1], temporaryAssets);
-      await writeFile(path.join(publicDirectory, "shawn-profile.jpg"), profile.bytes);
-    }
     console.log(`Synced ${notionPages.length} Notion pages and ${assetFiles.length} mirrored assets.`);
   } finally {
     await rm(temporaryDirectory, { recursive: true, force: true });

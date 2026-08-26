@@ -1,22 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { essays, profile, research } from "@/lib/content";
-
-const experience = [
-  {
-    years: "2025—Now",
-    role: "Machine Learning Engineer",
-    place: "Apple",
-    detail: "Large-scale pre-training and post-training—including SFT and reinforcement learning—for conversational and multimodal foundation models.",
-  },
-  {
-    years: "2024",
-    role: "Machine Learning Engineer Intern",
-    place: "Apple · Vision Pro",
-    detail: "Multimodal agents for content creation, bringing perception, language, and action into a spatial computing environment.",
-  },
-];
 
 const personStructuredData = {
   "@context": "https://schema.org",
@@ -26,13 +11,9 @@ const personStructuredData = {
     name: "Yunzhong Xiao",
     alternateName: ["Shawn Xiao", "Yunzhong Shawn Xiao", "肖云中"],
     url: "https://shawn-yzxiao.github.io/",
-    image: "https://shawn-yzxiao.github.io/shawn-profile.jpg",
     jobTitle: "Machine Learning Researcher",
     worksFor: { "@type": "Organization", name: "Apple" },
-    alumniOf: [
-      { "@type": "CollegeOrUniversity", name: "Carnegie Mellon University" },
-      { "@type": "CollegeOrUniversity", name: "SUSTech" },
-    ],
+    alumniOf: { "@type": "CollegeOrUniversity", name: "Carnegie Mellon University" },
     sameAs: [
       "https://github.com/Shawn-yzXiao",
       "https://www.linkedin.com/in/yzxiao/",
@@ -49,29 +30,29 @@ export default function Home() {
       <SiteHeader />
       <main>
         <section className="hero shell" id="about">
-          <div className="hero-copy">
+          <div className="hero-identity">
             <p className="eyebrow">{profile.eyebrow}</p>
             <h1>Yunzhong <span>“Shawn”</span> Xiao</h1>
-            <p className="hero-thesis">{profile.mission}</p>
-            <p className="hero-intro">{profile.intro}</p>
+            <ul className="hero-focus">
+              {profile.roleBullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+            </ul>
             <div className="hero-links" aria-label="Profile links">
-              <a href="https://scholar.google.com/citations?user=b9uTwEgAAAAJ&hl=en">Scholar ↗</a>
-              <a href="https://github.com/Shawn-yzXiao">GitHub ↗</a>
-              <a href="https://www.linkedin.com/in/yzxiao/">LinkedIn ↗</a>
               <a href="mailto:shawncloudy@gmail.com">Email ↗</a>
+              <a href="https://www.linkedin.com/in/yzxiao/">LinkedIn ↗</a>
+              <a href="https://scholar.google.com/citations?user=b9uTwEgAAAAJ&hl=en">Google Scholar ↗</a>
+              <a href="https://github.com/Shawn-yzXiao">GitHub ↗</a>
             </div>
           </div>
-          <figure className="portrait-wrap">
-            <div className="portrait-rule" aria-hidden="true" />
-            <Image className="portrait" src="/shawn-profile.jpg" width={1200} height={1200} priority alt="Portrait of Yunzhong Shawn Xiao" />
-            <figcaption><span>Currently</span>{profile.currently}</figcaption>
-          </figure>
+          <div className="hero-bio">
+            <ReactMarkdown>{profile.bio}</ReactMarkdown>
+          </div>
         </section>
 
         <section className="section shell" id="agenda">
           <div className="section-heading">
-            <p className="eyebrow">Research agenda</p>
-            <h2>Learning deeply. Acting intelligently. Interacting naturally.</h2>
+            <p className="eyebrow">Mission</p>
+            <h2>Mission &amp; Research Agenda</h2>
+            <p className="mission-statement"><strong>{profile.mission}</strong> {profile.missionDetail}</p>
           </div>
           <div className="agenda-grid">
             {profile.agenda.map((item) => (
@@ -87,8 +68,8 @@ export default function Home() {
         <section className="section shell" id="research">
           <div className="section-heading heading-row">
             <div>
-              <p className="eyebrow">Selected research</p>
-              <h2>Models that perceive, remember, and use tools.</h2>
+              <p className="eyebrow">Research</p>
+              <h2>Selected Research</h2>
             </div>
             <a className="section-link" href="https://scholar.google.com/citations?user=b9uTwEgAAAAJ&hl=en">All publications ↗</a>
           </div>
@@ -107,12 +88,13 @@ export default function Home() {
         <section className="section notes-section" id="writing">
           <div className="shell">
             <div className="section-heading heading-row">
-              <div><p className="eyebrow">Research notes</p><h2>Questions I am thinking through in public.</h2></div>
+              <div><p className="eyebrow">Writing</p><h2>Blogs</h2></div>
               <Link className="section-link" href="/writing/">View the notebook →</Link>
             </div>
             <p className="notes-context">
-              Dated snapshots of earlier explorations—not a closed research agenda. The notebook will grow across
-              training, behavior, interaction, embodied intelligence, robotics, and broader intelligent systems.
+              These are dated snapshots of questions I explored in 2026—not a closed research agenda. The notebook
+              will grow across model training, behavior, interaction, embodied intelligence, robotics, and broader
+              intelligent systems.
             </p>
             <div className="index-list">
               {englishEssays.map((essay, index) => (
@@ -127,30 +109,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section shell profile-section" id="experience">
-          <div className="profile-intro">
-            <p className="eyebrow">Background</p>
-            <h2>Full-stack model research, from systems to behavior.</h2>
-            <p>
-              I studied computer systems at Carnegie Mellon and previously industrial design and computer
-              engineering at SUSTech. That combination continues to shape how I think: models are both technical
-              systems and things people must understand, trust, and work with.
-            </p>
-            <p className="reviewer-note">Reviewer · NeurIPS · ACL</p>
-          </div>
-          <div className="timeline">
-            {experience.map((item) => (
-              <article className="timeline-row" key={`${item.years}-${item.role}`}>
-                <time>{item.years}</time>
-                <div><h3>{item.role}</h3><p className="timeline-place">{item.place}</p><p>{item.detail}</p></div>
-              </article>
-            ))}
-            <article className="timeline-row education-row">
-              <time>2024</time>
-              <div><h3>M.S. Computer Systems</h3><p className="timeline-place">Carnegie Mellon University</p></div>
-            </article>
-          </div>
-        </section>
       </main>
       <SiteFooter />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personStructuredData) }} />

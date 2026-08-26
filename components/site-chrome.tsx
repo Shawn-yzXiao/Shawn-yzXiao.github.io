@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function SiteHeader() {
   return (
@@ -11,11 +12,14 @@ export function SiteHeader() {
         <nav aria-label="Primary navigation">
           <Link href="/#research">Research</Link>
           <Link href="/writing/">Writing</Link>
-          <Link href="/#experience">About</Link>
+          <Link href="/#about">About</Link>
         </nav>
-        <a className="contact-link" href="mailto:shawncloudy@gmail.com">
-          Let’s talk <span aria-hidden="true">↗</span>
-        </a>
+        <div className="header-actions">
+          <ThemeToggle />
+          <a className="contact-link" href="mailto:shawncloudy@gmail.com">
+            Let’s talk <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
     </header>
   );
@@ -26,8 +30,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="shell footer-grid">
         <p className="footer-statement">
-          Building foundation models that learn deeply, act intelligently, and interact
-          naturally with people.
+          From fluent predictors to reliable collaborators.
         </p>
         <div>
           <p className="footer-label">Elsewhere</p>
@@ -38,12 +41,11 @@ export function SiteFooter() {
         <div>
           <p className="footer-label">Contact</p>
           <a href="mailto:shawncloudy@gmail.com">shawncloudy@gmail.com</a>
-          <p>Cupertino, California</p>
         </div>
       </div>
       <div className="shell footer-base">
         <span>© {new Date().getFullYear()} Yunzhong Shawn Xiao</span>
-        <span>Notion-backed · Built for the open web</span>
+        <span>Notion-backed</span>
       </div>
     </footer>
   );
