@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <style>
+    :root { color: #171816; --catenary-accent: #b44a2b; }
+    @media (prefers-color-scheme: dark) {
+      :root { color: #eeeae1; --catenary-accent: #de7955; }
+    }
+  </style>
+  <path d="M20 17C29 40 44 52 64 60C84 52 99 40 108 17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+  <path d="M64 60V91" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="8"/>
+  <path d="M39 77C51 82 58 87 64 91C74 98 84 105 97 113" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.5"/>
+  <path d="M93 77C81 83 72 88 64 91C56 97 45 105 33 113" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.5"/>
+  <circle cx="64" cy="91" r="5" fill="var(--catenary-accent)"/>
+</svg>

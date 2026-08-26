@@ -122,15 +122,16 @@ img {
   letter-spacing: -0.01em;
 }
 
-.wordmark-mark {
-  display: grid;
-  place-items: center;
-  width: 31px;
-  height: 31px;
-  border: 1px solid var(--ink);
-  font-family: var(--serif);
-  font-size: 13px;
-  font-style: italic;
+.catenary-logo {
+  width: 35px;
+  height: 35px;
+  flex: none;
+  overflow: visible;
+  color: var(--ink);
+}
+
+.catenary-logo-joint {
+  fill: var(--accent);
 }
 
 .masthead nav {
@@ -1027,6 +1028,7 @@ img {
   body { font-size: 16px; }
   .shell { width: calc(100% - 40px); }
   .masthead { min-height: 68px; }
+  .catenary-logo { width: 32px; height: 32px; }
   .header-actions { gap: 12px; }
   .contact-link { font-size: 13px; }
   .theme-toggle > span:last-child { display: none; }

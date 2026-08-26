@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CatenaryLogo } from "@/components/catenary-logo";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export function SiteHeader() {
@@ -6,7 +7,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="shell masthead">
         <Link className="wordmark" href="/" aria-label="Shawn Xiao, home">
-          <span className="wordmark-mark">YX</span>
+          <CatenaryLogo className="catenary-logo" />
           <span>Shawn Xiao</span>
         </Link>
         <nav aria-label="Primary navigation">
