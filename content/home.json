@@ -1,0 +1,47 @@
+{
+  "eyebrow": "Machine Learning Researcher · Cupertino, California",
+  "name": "Yunzhong “Shawn” Xiao",
+  "mission": "From fluent predictors to reliable collaborators.",
+  "intro": "I work across the full stack of foundation model capability: pre-training to build representations, SFT and RL to shape behavior, synthetic data and evaluation to expose failure modes, and agents and tools to turn intelligence into reliable action.",
+  "currently": "Conversational and multimodal foundation models at Apple",
+  "agenda": [
+    {
+      "number": "01",
+      "title": "Train intelligence",
+      "text": "Pre-training and continued pre-training for multimodal, speech, and conversational foundation models—supported by large-scale data and distributed systems."
+    },
+    {
+      "number": "02",
+      "title": "Shape behavior",
+      "text": "SFT, reward modeling, RL and RLVR, synthetic users, test-time scaling, and evaluations that make capability boundaries visible."
+    },
+    {
+      "number": "03",
+      "title": "Build collaboration",
+      "text": "Agents, tool capability memory, guardrails, and full-duplex interaction that turn model intelligence into dependable human–AI collaboration."
+    }
+  ],
+  "research": [
+    {
+      "title": "ToolMem: Enhancing Multimodal Agents with Learnable Tool Capability Memory",
+      "summary": "Dynamic memory that helps agents learn the strengths and weaknesses of neural tools from test-time experience.",
+      "venue": "arXiv",
+      "year": "2025",
+      "href": "https://arxiv.org/abs/2510.06664"
+    },
+    {
+      "title": "MMPerspective: Do MLLMs Understand Perspective?",
+      "summary": "A ten-task benchmark for perspective perception, spatial reasoning, and robustness across 43 multimodal models.",
+      "venue": "NeurIPS",
+      "year": "2025",
+      "href": "https://arxiv.org/abs/2505.20426"
+    },
+    {
+      "title": "Caption Anything in Video",
+      "summary": "Training-free, fine-grained object-centric video captioning with spatially precise and temporally coherent descriptions.",
+      "venue": "AAAI",
+      "year": "2026",
+      "href": "https://ojs.aaai.org/index.php/AAAI/article/view/42385"
+    }
+  ]
+}
