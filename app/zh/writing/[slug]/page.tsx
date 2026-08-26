@@ -23,7 +23,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical,
       languages: { en: `/writing/${essay.slug}/`, "zh-Hans": canonical, "x-default": `/writing/${essay.slug}/` },
     },
-    openGraph: { type: "article", title: essay.title, description: essay.description, url: canonical, publishedTime: essay.dateISO, modifiedTime: essay.revisedISO },
+    openGraph: {
+      type: "article",
+      siteName: "Yunzhong Shawn Xiao",
+      title: essay.title,
+      description: essay.description,
+      url: canonical,
+      publishedTime: essay.dateISO,
+      modifiedTime: essay.revisedISO,
+      locale: "zh_CN",
+      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: essay.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: essay.title,
+      description: essay.description,
+      images: ["/og-image.jpg"],
+    },
   };
 }
 
