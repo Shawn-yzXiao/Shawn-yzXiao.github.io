@@ -26,7 +26,19 @@ const personStructuredData = {
 
 export default function Home() {
   const englishEssays = essays.filter((essay) => essay.lang === "en");
-  const [bioIntroduction, ...bioBody] = profile.bio.split(/\n\s*\n/);
+  const bioParagraphs = profile.bio.split(/\n\s*\n/);
+  const capabilityParagraph = bioParagraphs[1] ?? "";
+  const experienceParagraph = bioParagraphs[2] ?? "";
+  const missionParagraph = bioParagraphs[3] ?? "";
+  const writingParagraph = bioParagraphs[4] ?? "";
+  const contactParagraph = bioParagraphs[5] ?? "";
+  const capabilitySeparator = capabilityParagraph.indexOf(":");
+  const capabilityLead = capabilitySeparator === -1
+    ? capabilityParagraph
+    : `${capabilityParagraph.slice(0, capabilitySeparator)}.`;
+  const capabilityDetails = capabilitySeparator === -1
+    ? ""
+    : capabilityParagraph.slice(capabilitySeparator + 1).trim();
   const focusAreas = [
     {
       number: "01",
@@ -63,7 +75,7 @@ export default function Home() {
                   alt="Shawn Xiao in Zion National Park"
                   width={720}
                   height={720}
-                  sizes="(max-width: 680px) 34vw, (max-width: 900px) 190px, 15vw"
+                  sizes="(max-width: 680px) 34vw, (max-width: 900px) 210px, 18vw"
                   priority
                 />
               </figure>
@@ -78,9 +90,17 @@ export default function Home() {
           </div>
           <div className="hero-bio">
             <div className="hero-bio-introduction">
-              <ReactMarkdown>{bioIntroduction}</ReactMarkdown>
+              <ReactMarkdown>{capabilityLead}</ReactMarkdown>
             </div>
-            <ReactMarkdown>{bioBody.join("\n\n")}</ReactMarkdown>
+            <div className="hero-bio-core">
+              {capabilityDetails && <ReactMarkdown>{capabilityDetails}</ReactMarkdown>}
+              <ReactMarkdown>{experienceParagraph}</ReactMarkdown>
+              <ReactMarkdown>{missionParagraph}</ReactMarkdown>
+            </div>
+            <div className="hero-bio-notes">
+              <ReactMarkdown>{writingParagraph}</ReactMarkdown>
+              <ReactMarkdown>{contactParagraph}</ReactMarkdown>
+            </div>
           </div>
         </section>
 

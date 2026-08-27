@@ -217,15 +217,14 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.96fr) minmax(420px, 1.04fr);
-  gap: clamp(64px, 7.5vw, 108px);
+  grid-template-columns: minmax(0, 1.06fr) minmax(400px, 0.94fr);
+  gap: clamp(56px, 6vw, 84px);
   align-items: start;
   padding-block: clamp(82px, 9vw, 128px) 132px;
 }
 
 .hero-identity {
-  position: sticky;
-  top: 48px;
+  min-width: 0;
 }
 
 .eyebrow,
@@ -250,8 +249,8 @@ img {
 
 .hero-name-lockup {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(158px, 14vw, 190px);
-  gap: clamp(24px, 3vw, 38px);
+  grid-template-columns: minmax(0, 1fr) clamp(220px, 18vw, 258px);
+  gap: clamp(26px, 2.5vw, 34px);
   align-items: end;
 }
 
@@ -262,7 +261,7 @@ img {
 .hero h1 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(66px, 6.4vw, 94px);
+  font-size: clamp(64px, 5.9vw, 88px);
   font-weight: 480;
   letter-spacing: -0.055em;
   line-height: 0.92;
@@ -322,25 +321,28 @@ img {
 }
 
 .hero-bio {
-  max-width: 700px;
+  max-width: 660px;
   padding-top: 13px;
   color: var(--text-soft);
-  font-size: 17px;
-  line-height: 1.72;
+  font-size: 16.5px;
+  line-height: 1.68;
 }
 
 .hero-bio-introduction {
-  margin-bottom: 38px;
+  margin-bottom: 30px;
 }
 
 .hero-bio-introduction p {
-  margin-bottom: 0;
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(30px, 2.8vw, 40px);
+  letter-spacing: -0.025em;
+  line-height: 1.14;
 }
 
 .hero-portrait {
   margin: 0;
-  padding-top: 9px;
-  border-top: 1px solid var(--ink);
 }
 
 .hero-portrait img {
@@ -351,16 +353,24 @@ img {
   object-fit: cover;
 }
 
-.hero-bio p {
-  margin: 0 0 1.35em;
+.hero-bio-core > p {
+  margin: 0 0 1.25em;
 }
 
-.hero-bio p:first-child {
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: clamp(27px, 2.7vw, 38px);
-  letter-spacing: -0.025em;
-  line-height: 1.18;
+.hero-bio-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 34px;
+  padding-top: 23px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.62;
+}
+
+.hero-bio-notes p {
+  margin: 0;
 }
 
 .hero-bio strong {
@@ -1079,8 +1089,7 @@ img {
   .masthead { grid-template-columns: 1fr auto; }
   .masthead nav { display: none; }
   .hero { grid-template-columns: 1fr; gap: 64px; padding-bottom: 108px; }
-  .hero-identity { position: static; }
-  .hero-name-lockup { grid-template-columns: minmax(0, 1fr) 190px; }
+  .hero-name-lockup { grid-template-columns: minmax(0, 1fr) 210px; }
   .hero h1 { font-size: clamp(64px, 10vw, 88px); }
   .section { padding-block: 104px; }
   .agenda-item { padding-right: 24px; }
@@ -1109,6 +1118,7 @@ img {
   .hero-links { gap: 14px 22px; margin-top: 32px; padding-top: 19px; font-size: 13px; }
   .hero-bio { padding-top: 0; font-size: 16px; }
   .hero-bio-introduction { margin-bottom: 34px; }
+  .hero-bio-notes { grid-template-columns: 1fr; gap: 22px; margin-top: 32px; }
   .section { padding-block: 86px; }
   .section-heading { margin-bottom: 48px; }
   .heading-row { display: block; }
