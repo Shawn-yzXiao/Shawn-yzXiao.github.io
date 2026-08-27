@@ -265,25 +265,14 @@ img {
   font-weight: 400;
 }
 
-.hero-focus {
-  max-width: 590px;
-  margin: 48px 0 0;
-  padding: 24px 0 0 18px;
-  border-top: 1px solid var(--rule);
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.65;
-}
-
-.hero-focus li + li {
-  margin-top: 10px;
-}
-
 .hero-links {
   display: flex;
   flex-wrap: wrap;
   gap: 18px 32px;
-  margin-top: 38px;
+  max-width: 590px;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
   font-size: 14px;
   font-weight: 520;
 }
@@ -1062,7 +1051,6 @@ img {
   .hero { gap: 58px; padding-block: 70px 90px; }
   .hero h1 { font-size: clamp(62px, 20vw, 90px); }
   .hero h1 span { display: block; margin-block: 6px; }
-  .hero-focus { margin-top: 38px; }
   .hero-bio { padding-top: 0; font-size: 16px; }
   .hero-bio-opening { grid-template-columns: 1fr; gap: 24px; align-items: start; }
   .hero-portrait { grid-row: 1; width: clamp(144px, 42vw, 184px); justify-self: end; }

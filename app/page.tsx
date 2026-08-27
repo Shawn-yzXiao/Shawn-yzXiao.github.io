@@ -17,7 +17,6 @@ const personStructuredData = {
     worksFor: { "@type": "Organization", name: "Apple" },
     alumniOf: { "@type": "CollegeOrUniversity", name: "Carnegie Mellon University" },
     sameAs: [
-      "https://github.com/Shawn-yzXiao",
       "https://www.linkedin.com/in/yzxiao/",
       "https://scholar.google.com/citations?user=b9uTwEgAAAAJ&hl=en",
     ],
@@ -27,6 +26,23 @@ const personStructuredData = {
 export default function Home() {
   const englishEssays = essays.filter((essay) => essay.lang === "en");
   const [bioIntroduction, ...bioBody] = profile.bio.split(/\n\s*\n/);
+  const focusAreas = [
+    {
+      number: "01",
+      title: "Foundation model training",
+      text: profile.roleBullets[0],
+    },
+    {
+      number: "02",
+      title: "Data, systems & evaluation",
+      text: profile.roleBullets[1],
+    },
+    {
+      number: "03",
+      title: "Agents & interaction",
+      text: profile.agenda[2].text,
+    },
+  ];
 
   return (
     <>
@@ -36,14 +52,10 @@ export default function Home() {
           <div className="hero-identity">
             <p className="eyebrow">{profile.eyebrow}</p>
             <h1>Yunzhong <span>“Shawn”</span> Xiao</h1>
-            <ul className="hero-focus">
-              {profile.roleBullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
-            </ul>
             <div className="hero-links" aria-label="Profile links">
               <a href="mailto:shawncloudy@gmail.com">Email ↗</a>
               <a href="https://www.linkedin.com/in/yzxiao/">LinkedIn ↗</a>
               <a href="https://scholar.google.com/citations?user=b9uTwEgAAAAJ&hl=en">Google Scholar ↗</a>
-              <a href="https://github.com/Shawn-yzXiao">GitHub ↗</a>
             </div>
           </div>
           <div className="hero-bio">
@@ -68,12 +80,12 @@ export default function Home() {
 
         <section className="section shell" id="agenda">
           <div className="section-heading">
-            <p className="eyebrow">Mission</p>
-            <h2>Mission &amp; Research Agenda</h2>
+            <p className="eyebrow">Current work</p>
+            <h2>Research Focus</h2>
             <p className="mission-statement"><strong>{profile.mission}</strong> {profile.missionDetail}</p>
           </div>
           <div className="agenda-grid">
-            {profile.agenda.map((item) => (
+            {focusAreas.map((item) => (
               <article className="agenda-item" key={item.number}>
                 <span className="index-number">{item.number}</span>
                 <h3>{item.title}</h3>

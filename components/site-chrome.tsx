@@ -36,7 +36,6 @@ export function SiteFooter() {
         <div>
           <p className="footer-label">Elsewhere</p>
           <a href="https://scholar.google.com/citations?user=b9uTwEgAAAAJ&hl=en">Scholar ↗</a>
-          <a href="https://github.com/Shawn-yzXiao">GitHub ↗</a>
           <a href="https://www.linkedin.com/in/yzxiao/">LinkedIn ↗</a>
         </div>
         <div>
