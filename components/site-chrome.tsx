@@ -12,7 +12,7 @@ export function SiteHeader() {
         </Link>
         <nav aria-label="Primary navigation">
           <Link href="/#research">Research</Link>
-          <Link href="/writing/">Writing</Link>
+          <Link href="/writing/">Blogs</Link>
           <Link href="/#about">About</Link>
         </nav>
         <div className="header-actions">

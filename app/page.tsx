@@ -80,8 +80,7 @@ export default function Home() {
 
         <section className="section shell" id="agenda">
           <div className="section-heading">
-            <p className="eyebrow">Current work</p>
-            <h2>Research Focus</h2>
+            <h2>Current Focus</h2>
             <p className="mission-statement"><strong>{profile.mission}</strong> {profile.missionDetail}</p>
           </div>
           <div className="agenda-grid">
@@ -98,8 +97,7 @@ export default function Home() {
         <section className="section shell" id="research">
           <div className="section-heading heading-row">
             <div>
-              <p className="eyebrow">Research</p>
-              <h2>Selected Research</h2>
+              <h2>Research Publications</h2>
             </div>
             <a className="section-link" href="https://scholar.google.com/citations?user=b9uTwEgAAAAJ&hl=en">All publications ↗</a>
           </div>
@@ -118,7 +116,7 @@ export default function Home() {
         <section className="section notes-section" id="writing">
           <div className="shell">
             <div className="section-heading heading-row">
-              <div><p className="eyebrow">Writing</p><h2>Blogs</h2></div>
+              <div><h2>Blogs</h2></div>
               <Link className="section-link" href="/writing/">View the notebook →</Link>
             </div>
             <p className="notes-context">
