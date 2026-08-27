@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CatenaryLogo } from "@/components/catenary-logo";
+import { ProfileIconLink } from "@/components/profile-icon-link";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export function SiteHeader() {
@@ -17,9 +18,9 @@ export function SiteHeader() {
         </nav>
         <div className="header-actions">
           <ThemeToggle />
-          <a className="contact-link" href="mailto:shawncloudy@gmail.com">
-            Let’s talk <span aria-hidden="true">↗</span>
-          </a>
+          <ProfileIconLink className="contact-link" href="mailto:shawncloudy@gmail.com" icon="talk">
+            Let’s talk
+          </ProfileIconLink>
         </div>
       </div>
     </header>
@@ -35,12 +36,14 @@ export function SiteFooter() {
         </p>
         <div>
           <p className="footer-label">Elsewhere</p>
-          <a href="https://scholar.google.com/citations?user=b9uTwEgAAAAJ&hl=en">Scholar ↗</a>
-          <a href="https://www.linkedin.com/in/yzxiao/">LinkedIn ↗</a>
+          <ProfileIconLink href="https://scholar.google.com/citations?user=b9uTwEgAAAAJ&hl=en" icon="scholar">
+            Scholar
+          </ProfileIconLink>
+          <ProfileIconLink href="https://www.linkedin.com/in/yzxiao/" icon="linkedin">LinkedIn</ProfileIconLink>
         </div>
         <div>
           <p className="footer-label">Contact</p>
-          <a href="mailto:shawncloudy@gmail.com">shawncloudy@gmail.com</a>
+          <ProfileIconLink href="mailto:shawncloudy@gmail.com" icon="email">shawncloudy@gmail.com</ProfileIconLink>
         </div>
       </div>
       <div className="shell footer-base">

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
+import { ProfileIconLink } from "@/components/profile-icon-link";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { essays, profile, research } from "@/lib/content";
 
@@ -53,9 +54,11 @@ export default function Home() {
             <p className="eyebrow">{profile.eyebrow}</p>
             <h1>Yunzhong <span>“Shawn”</span> Xiao</h1>
             <div className="hero-links" aria-label="Profile links">
-              <a href="mailto:shawncloudy@gmail.com">Email ↗</a>
-              <a href="https://www.linkedin.com/in/yzxiao/">LinkedIn ↗</a>
-              <a href="https://scholar.google.com/citations?user=b9uTwEgAAAAJ&hl=en">Google Scholar ↗</a>
+              <ProfileIconLink href="mailto:shawncloudy@gmail.com" icon="email">Email</ProfileIconLink>
+              <ProfileIconLink href="https://www.linkedin.com/in/yzxiao/" icon="linkedin">LinkedIn</ProfileIconLink>
+              <ProfileIconLink href="https://scholar.google.com/citations?user=b9uTwEgAAAAJ&hl=en" icon="scholar">
+                Google Scholar
+              </ProfileIconLink>
             </div>
           </div>
           <div className="hero-bio">

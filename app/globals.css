@@ -277,6 +277,37 @@ img {
   font-weight: 520;
 }
 
+.profile-icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-link-icon {
+  display: inline-flex;
+  width: 25px;
+  height: 25px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  color: var(--accent);
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.profile-icon-link:hover .profile-link-icon,
+.profile-icon-link:focus-visible .profile-link-icon {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-1px);
+}
+
+.profile-icon-link:focus-visible {
+  outline: none;
+}
+
 .hero-bio {
   max-width: 700px;
   padding-top: 13px;
@@ -610,6 +641,18 @@ img {
 .footer-grid > div p {
   margin: 0;
   color: var(--footer-soft);
+}
+
+.site-footer .profile-link-icon {
+  border-color: var(--footer-rule);
+  color: var(--footer-soft);
+}
+
+.site-footer .profile-icon-link:hover .profile-link-icon,
+.site-footer .profile-icon-link:focus-visible .profile-link-icon {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--footer-bg);
 }
 
 .footer-label {
