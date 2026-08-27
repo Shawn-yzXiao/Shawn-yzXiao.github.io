@@ -52,7 +52,22 @@ export default function Home() {
         <section className="hero shell" id="about">
           <div className="hero-identity">
             <p className="eyebrow">{profile.eyebrow}</p>
-            <h1>Yunzhong <span>“Shawn”</span> Xiao</h1>
+            <div className="hero-name-lockup">
+              <div className="hero-name">
+                <h1>Shawn Xiao</h1>
+                <p className="hero-chinese-name" lang="zh-Hans">肖云中</p>
+              </div>
+              <figure className="hero-portrait">
+                <Image
+                  src="/shawn-zion.jpg"
+                  alt="Shawn Xiao in Zion National Park"
+                  width={720}
+                  height={720}
+                  sizes="(max-width: 680px) 34vw, (max-width: 900px) 190px, 15vw"
+                  priority
+                />
+              </figure>
+            </div>
             <div className="hero-links" aria-label="Profile links">
               <ProfileIconLink href="mailto:shawncloudy@gmail.com" icon="email">Email</ProfileIconLink>
               <ProfileIconLink href="https://www.linkedin.com/in/yzxiao/" icon="linkedin">LinkedIn</ProfileIconLink>
@@ -62,20 +77,8 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-bio">
-            <div className="hero-bio-opening">
-              <div className="hero-bio-introduction">
-                <ReactMarkdown>{bioIntroduction}</ReactMarkdown>
-              </div>
-              <figure className="hero-portrait">
-                <Image
-                  src="/shawn-zion.jpg"
-                  alt="Shawn Xiao in Zion National Park"
-                  width={720}
-                  height={720}
-                  sizes="(max-width: 680px) 42vw, (max-width: 900px) 220px, 16vw"
-                  priority
-                />
-              </figure>
+            <div className="hero-bio-introduction">
+              <ReactMarkdown>{bioIntroduction}</ReactMarkdown>
             </div>
             <ReactMarkdown>{bioBody.join("\n\n")}</ReactMarkdown>
           </div>
