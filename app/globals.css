@@ -345,12 +345,51 @@ img {
   margin: 0;
 }
 
+.hero-portrait-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  border: 1px solid var(--rule);
+}
+
 .hero-portrait img {
   width: 100%;
   height: auto;
   aspect-ratio: 1;
-  border: 1px solid var(--rule);
   object-fit: cover;
+  transition: opacity 420ms ease;
+}
+
+.hero-portrait-night {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+:root[data-theme="dark"] .hero-portrait-day {
+  opacity: 0;
+}
+
+:root[data-theme="dark"] .hero-portrait-night {
+  opacity: 1;
+}
+
+:root[data-theme="light"] .hero-portrait-day {
+  opacity: 1;
+}
+
+:root[data-theme="light"] .hero-portrait-night {
+  opacity: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .hero-portrait-day {
+    opacity: 0;
+  }
+
+  :root:not([data-theme]) .hero-portrait-night {
+    opacity: 1;
+  }
 }
 
 .hero-bio-core > p {

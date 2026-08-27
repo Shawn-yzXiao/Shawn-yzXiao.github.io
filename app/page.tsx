@@ -70,14 +70,26 @@ export default function Home() {
                 <p className="hero-chinese-name" lang="zh-Hans">肖云中</p>
               </div>
               <figure className="hero-portrait">
-                <Image
-                  src="/shawn-zion.jpg"
-                  alt="Shawn Xiao in Zion National Park"
-                  width={720}
-                  height={720}
-                  sizes="(max-width: 680px) 34vw, (max-width: 900px) 210px, 18vw"
-                  priority
-                />
+                <div className="hero-portrait-frame">
+                  <Image
+                    className="hero-portrait-day"
+                    src="/shawn-zion.jpg"
+                    alt="Shawn Xiao in Zion National Park"
+                    width={720}
+                    height={720}
+                    sizes="(max-width: 680px) 34vw, (max-width: 900px) 210px, 18vw"
+                    priority
+                  />
+                  <Image
+                    className="hero-portrait-night"
+                    src="/shawn-zion-night.jpg"
+                    alt=""
+                    width={720}
+                    height={720}
+                    sizes="(max-width: 680px) 34vw, (max-width: 900px) 210px, 18vw"
+                    priority
+                  />
+                </div>
               </figure>
             </div>
             <div className="hero-links" aria-label="Profile links">
