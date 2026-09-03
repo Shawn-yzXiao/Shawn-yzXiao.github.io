@@ -1,4 +1,4 @@
-# Beyond Behavior: How Post-Training Shapes an LLM’s Character
+# Training the Assistant: How Post-Training Shapes an LLM’s Character
 
 *Originally written April 18, 2026 · Revised English edition August 2026*
 
