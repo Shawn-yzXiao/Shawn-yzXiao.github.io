@@ -1,10 +1,8 @@
 # 超越轮次：走向能边听、边说、边行动的模型
 
-*原作于 2026 年 5 月 14 日 · 中文修订版 2026 年 8 月 · 一次较早期的方向探索*
+*原作于 2026 年 5 月 14 日 · 一次较早期的方向探索*
 
 [English edition](https://app.notion.com/p/3c57bc231a8281288c72f5909e2a669d)
-
-> 这篇文章记录的是我在 2026 年 5 月对交互式 AI 的一阶段思考，不代表一个封闭的研究议程。实时多模态学习、异步推理、工具使用和行动之间如何协同，仍会随着模型进入 robotics 与 embodied systems 而持续演化。
 
 ## 一、Interaction Model、Full Duplex 与 turn-based LLM
 

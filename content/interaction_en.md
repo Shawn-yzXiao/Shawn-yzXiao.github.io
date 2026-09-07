@@ -1,10 +1,8 @@
 # Beyond Turn-Taking: Toward Models That Listen, Speak, and Act
 
-*Originally written May 14, 2026 · Revised English edition August 2026 · An earlier exploration of interactive AI*
+*Originally written May 14, 2026 · An earlier exploration of interactive AI*
 
 [Read the Chinese edition →](https://app.notion.com/p/3c57bc231a8281cf8d2dc6d209f67002)
-
-> This essay records an earlier stage of my thinking about interactive models, not a closed research agenda. These questions should become more important as language models move into robotics and other embodied settings.
 
 ## 1. Interaction models, full duplex, and the limits of turn-taking
 

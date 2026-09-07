@@ -59,7 +59,6 @@ export function ArticlePage({ essay }: { essay: Essay }) {
           <p className="article-deck">{essay.description}</p>
           <div className="article-meta">
             <span>Written {essay.dateLabel}</span>
-            <span>Revised August 2026</span>
             <span>{essay.readingTime} read</span>
             <a href={languageHref}>{languageLabel} →</a>
           </div>
