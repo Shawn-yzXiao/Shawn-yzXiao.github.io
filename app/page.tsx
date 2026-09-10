@@ -155,13 +155,8 @@ export default function Home() {
           <div className="shell">
             <div className="section-heading heading-row">
               <div><h2>Blogs</h2></div>
-              <Link className="section-link" href="/writing/">View the notebook →</Link>
+              <Link className="section-link" href="/writing/">View all notes →</Link>
             </div>
-            <p className="notes-context">
-              These are dated snapshots of questions I explored in 2026—not a closed research agenda. The notebook
-              will grow across model training, behavior, interaction, embodied intelligence, robotics, and broader
-              intelligent systems.
-            </p>
             <div className="index-list">
               {englishEssays.map((essay, index) => (
                 <Link className="index-row note-row" href={`/writing/${essay.slug}/`} key={essay.slug}>

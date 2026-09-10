@@ -15,9 +15,8 @@ export default function ChineseWritingPage() {
       <SiteHeader />
       <main>
         <header className="archive-hero shell">
-          <p className="eyebrow">研究笔记 · 2026—</p>
-          <h1>流动中的想法，<br /><em>而非刻在石上的结论。</em></h1>
-          <p>关于模型如何获得能力、训练如何塑造行为，以及智能系统如何与人自然协作。这些都是有时间坐标的思考切片；未来会继续延伸到 embodied intelligence、robotics 与更广阔的智能系统。</p>
+          <h1>研究笔记</h1>
+          <p>我写这些文章，首先是为了记录和澄清自己的思考。很多笔记从一个问题开始，我通过阅读和讨论继续探索，也常用 AI 来检验想法、整理材料和打磨文字。当其中形成的想法或洞见可能对别人也有帮助时，我会把它们分享出来。</p>
         </header>
         <section className="archive-list shell" aria-label="研究笔记">
           {items.map((essay, index) => (

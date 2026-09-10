@@ -732,23 +732,18 @@ img {
 }
 
 .archive-hero {
-  padding-block: clamp(90px, 12vw, 168px) 112px;
+  padding-block: clamp(80px, 10vw, 128px) 80px;
 }
 
 .archive-hero h1 {
-  max-width: 1000px;
-  font-size: clamp(58px, 7.4vw, 108px);
-  line-height: 0.94;
-}
-
-.archive-hero h1 em {
-  color: var(--accent);
-  font-weight: 400;
+  max-width: 720px;
+  font-size: clamp(46px, 5.4vw, 72px);
+  line-height: 1;
 }
 
 .archive-hero > p:last-child {
   max-width: 680px;
-  margin: 48px 0 0 auto;
+  margin: 34px 0 0;
   color: var(--muted);
   font-size: 17px;
 }

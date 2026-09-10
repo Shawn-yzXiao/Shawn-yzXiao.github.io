@@ -48,7 +48,6 @@ export function SiteFooter() {
       </div>
       <div className="shell footer-base">
         <span>© {new Date().getFullYear()} Yunzhong Shawn Xiao</span>
-        <span>Notion-backed</span>
       </div>
     </footer>
   );

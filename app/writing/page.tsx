@@ -15,12 +15,12 @@ export default function WritingPage() {
       <SiteHeader />
       <main>
         <header className="archive-hero shell">
-          <p className="eyebrow">Research notebook · 2026—</p>
-          <h1>Ideas in motion,<br /><em>not conclusions in stone.</em></h1>
+          <h1>Research Notes</h1>
           <p>
-            Essays on how models acquire capability, how training shapes behavior, and how
-            intelligent systems can interact with people naturally. These are dated snapshots;
-            the scope will continue expanding toward embodied intelligence, robotics, and beyond.
+            I write primarily to record and clarify my own thinking. Many notes begin with a
+            question that I explore through reading and discussion, often using AI to test ideas,
+            organize material, and refine the writing. I share them here when I think the resulting
+            ideas or insights may also be useful to others.
           </p>
         </header>
         <section className="archive-list shell" aria-label="Research notes">
