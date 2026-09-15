@@ -144,7 +144,10 @@ export default function Home() {
               <a className="index-row" href={item.href} key={item.title}>
                 <span className="index-number">{String(index + 1).padStart(2, "0")}</span>
                 <span className="index-main"><strong>{item.title}</strong><span>{item.summary}</span></span>
-                <span className="index-meta">{item.venue}<br />{item.year}</span>
+                <span className="index-meta">
+                  {item.venue}<br />{item.year}
+                  {item.award && <><br /><span className="publication-award">{item.award}</span></>}
+                </span>
                 <span className="index-arrow" aria-hidden="true">↗</span>
               </a>
             ))}

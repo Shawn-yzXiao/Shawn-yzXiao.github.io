@@ -125,8 +125,16 @@ function extractHomeData(markdown, fallback) {
     const metadata = blockLines[0] ?? "";
     const venue = metadata.match(/\b(NeurIPS|AAAI|arXiv)\b/i)?.[1] ?? "Research";
     const year = metadata.match(/\b(20\d{2})\b/)?.[1] ?? "";
+    const award = metadata.match(/\b(Best Demo Runner-Up)\b/i)?.[1];
     const summary = blockLines.at(-1) ?? "";
-    research.push({ title: plainText(match[1]), href: match[2], summary, venue, year });
+    research.push({
+      title: plainText(match[1]),
+      href: match[2],
+      summary,
+      venue,
+      year,
+      ...(award ? { award } : {}),
+    });
   }
 
   return {

@@ -45,6 +45,7 @@
       "summary": "CAT-V is a training-free framework for fine-grained, object-centric video captioning. It combines segmentation, temporal analysis, and multimodal prompting to produce spatially precise and temporally coherent descriptions.",
       "venue": "AAAI",
       "year": "2026",
+      "award": "Best Demo Runner-Up",
       "href": "https://ojs.aaai.org/index.php/AAAI/article/view/42385"
     }
   ]

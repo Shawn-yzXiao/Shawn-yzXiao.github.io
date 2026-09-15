@@ -568,6 +568,10 @@ img {
   text-align: right;
 }
 
+.publication-award {
+  color: var(--accent);
+}
+
 .index-arrow {
   justify-self: end;
   font-size: 18px;
